@@ -1,8 +1,5 @@
-﻿var app = angular.module('MyApp', []);
+﻿var app = angular.module('MyApp', ['ngResource']);
 
-app.controller('MyCtrl', function ($scope, $http) {
-    $http.get('/people.js').success(function (data) {
-        $scope.people = data;
-    });
-
+app.controller('MyCtrl', function ($scope, $http, $resource) {
+    $scope.people = $resource('/people.js').query();
 });
