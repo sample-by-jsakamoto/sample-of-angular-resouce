@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+</head>
+<body ng-app="MyApp">
+    <h1>TypeScript HTML App</h1>
+
+    <div ng-controller="MyCtrl">
+        <ul>
+            <li ng-repeat="person in people">
+                {{person.Name}}
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="scripts/angular.js"></script>
+    <script src="myapp.js"></script>
+</body>
+</html>
